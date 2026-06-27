@@ -12,6 +12,7 @@
 
 
 # pindef
+```c
 #define MOTOR_1_PWM_A
 #define MOTOR_1_PWM_B
 #define MOTOR_2_PWM_A
@@ -27,6 +28,6 @@
 #define IR_3
 #define IR_4
 #define IR_5
-
+```
 
 
