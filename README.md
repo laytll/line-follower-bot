@@ -6,6 +6,7 @@
 
 # TODO
 - [x] define pins
+- [ ] implement code of the state machine
 
 # pindef
 ```c
@@ -25,5 +26,22 @@
 #define IR4_RM D16          // --> Sensor p.6 (IR4)
 #define IR5_RR D15          // --> Sensor p.7 (IR5)
 ```
+
+## Interim Functionality
+The robot will move forward only, handling left and right turns.  
+No logging of track taken, but will give us a chance to check the data.  
+
+|state      |action                             |next state |
+|-----------|-----------------------------------|-----------|
+|OFF        |Power applied                      | STOP      |
+|STOP       |M or RM or LM  sensor on           | FORWARD   |
+|FORWARD    |Both motors forward                | MOVING    |
+|MOVING     |LL sensor on                       | TURN_LEFT |
+|MOVING     |RR sensor on                       | TURN_RIGHT|
+|MOVING     |M sensor off                       | STOP      |
+|TURN_LEFT  |left motor off, right motor on     | TURNING   |
+|TURN_RIGHT |right motor off, left motor on     | TURNING   |
+|TURNING    |LL and RR off                      | STOP      |
+
 
 
