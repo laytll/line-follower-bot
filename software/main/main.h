@@ -34,7 +34,11 @@
 
 #define NUM_SENSORS 5
 
-#define SEN_MAX_VAL 32767
+#define SEN_READ_B 600
+#define SEN_READ_W 300
 #define SEN_DIFF_PER 25
+
+#define ON_BLACK 1
+#define OFF_BLACK 0
 
 #endif

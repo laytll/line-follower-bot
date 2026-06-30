@@ -6,8 +6,9 @@
 
 # TODO
 - [x] define pins
-- [ ] Sensor Implementation
-- [ ] implement code of the state machine
+- [x] Sensor Implementation
+- [x] implement code of the state machine
+- [ ] Debug printouts
 
 # pindef
 ```c
